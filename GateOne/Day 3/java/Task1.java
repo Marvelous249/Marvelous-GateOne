@@ -5,7 +5,7 @@ import java.util.Scanner;
 	Scanner input = new Scanner(System.in);
 	Random random = new Random();
 
-	for (int attempt = 10; attempt > 0; attempt--) {
+	for (int attempt = 100; attempt > 90; attempt--) {
 	int number1 = random.nextInt(100);
 	int number2 = random.nextInt(100);
 	int answer = number1 + number2;
