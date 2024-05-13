@@ -22,7 +22,7 @@ public class AgeCalculator {
 	
         }
 
-        System.out.print(age);
+        return age;
     }
 
 
