@@ -5,11 +5,12 @@ public class AgeCalculator {
         int day = Integer.parseInt(parts[0]);
         int month = Integer.parseInt(parts[1]);
         int year = Integer.parseInt(parts[2]);
+	
+	LocalDateTime checkDate = LocalDatetime.now();
 
-
-        int currentYear = 2024;
-        int currentMonth = 5;
-        int currentDay = 12;
+        int currentYear = checkDate.getYear();
+        int currentMonth = checkDate.getMonth();
+        int currentDay = checkDate.getDay();
 
 
         int age = currentYear - year;
