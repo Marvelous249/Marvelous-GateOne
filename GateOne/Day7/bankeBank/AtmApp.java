@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class AtmApp{
 	public static void main(String... main){
