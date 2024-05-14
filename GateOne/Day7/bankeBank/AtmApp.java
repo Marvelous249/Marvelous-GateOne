@@ -11,19 +11,16 @@ public class AtmApp{
 	String lastName = input.nextLine();
 
 	System.out.print("Enter a 4-digit pin: ");
-	int pin = input.nextInt();
+	String pin = input.nextLine();
 	
 	String userId = createUserAccount(firstName, lastName, pin);
 
-	if (pin > 4) System.out.println("Enter a 4 digit password");
-	
-        
-        else System.out.println("User ID: " + userId);
-    }
+	if (pin.lenght > 4){
+		System.out.print("Enter a 4-digit pin!!!!: ");
+	pin = input.nextLine();
+	}
 
-	 public static String createUserAccount(String firstName, String lastName, int pin) {
-       
-        char firstInitial = firstName.charAt(0);
+	 char firstInitial = firstName.charAt(0);
 
 	 String lastNameInitials = lastName.substring(0, Math.min(5, lastName.length()));
 
@@ -32,8 +29,12 @@ public class AtmApp{
 
         return userId;
     
+	 
 }
+	 public static String createUserAccount(String firstName, String lastName, String pin) {
+       
 
-        
-     
+	System.out.println("User ID: " + userId);
+
+}
 }
