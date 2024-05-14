@@ -14,9 +14,11 @@ public class AtmApp{
 	int pin = input.nextInt();
 	
 	String userId = createUserAccount(firstName, lastName, pin);
+
+	if (pin > 4) System.out.println("Enter a 4 digit password");
 	
         
-        System.out.println("User ID: " + userId);
+        else System.out.println("User ID: " + userId);
     }
 
 	 public static String createUserAccount(String firstName, String lastName, int pin) {
