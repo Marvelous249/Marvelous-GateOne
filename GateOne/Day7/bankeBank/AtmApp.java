@@ -12,17 +12,25 @@ public class AtmApp{
 
 	System.out.print("Enter a 4-digit pin: ");
 	int pin = input.nextInt();
-
+	
 	String userId = createUserAccount(firstName, lastName, pin);
 	
-	if (pin > 4) System.out.println("Not a 4 digit pin enter a 4 digit pin");
-	
-	else System.out.println("User ID: " + userId);
-}
+        
+        System.out.println("User ID: " + userId);
+    }
 
 	 public static String createUserAccount(String firstName, String lastName, int pin) {
        
         char firstInitial = firstName.charAt(0);
+
+	 String lastNameInitials = lastName.substring(0, Math.min(5, lastName.length()));
+
+
+	String userId = firstInitial + lastNameInitials + pin;
+
+        return userId;
+    
+}
 
         
      
