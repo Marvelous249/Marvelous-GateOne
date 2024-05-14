@@ -15,10 +15,16 @@ public class AtmApp{
 	
 	String userId = createUserAccount(firstName, lastName, pin);
 
-	if (pin.lenght > 4){
-		System.out.print("Enter a 4-digit pin!!!!: ");
-	pin = input.nextLine();
+	while(pin.length() != 4 || !pin.matches("\\d+")){
+		System.out.print("Try again enter a 4-digit pin!!!!: ");
+	pin = input.next();
 	}
+
+	System.out.println("User ID: " + userId);
+
+}
+	 public static String createUserAccount(String firstName, String lastName, String pin) {
+
 
 	 char firstInitial = firstName.charAt(0);
 
@@ -28,13 +34,7 @@ public class AtmApp{
 	String userId = firstInitial + lastNameInitials + pin;
 
         return userId;
-    
-	 
-}
-	 public static String createUserAccount(String firstName, String lastName, String pin) {
-       
 
-	System.out.println("User ID: " + userId);
-
+	
 }
 }
