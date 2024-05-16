@@ -19,8 +19,9 @@ public class MenstrualApp {
         System.out.println("How many days does your menstrual cycle length take?"); 
         int cycleLength = input.nextInt(); 
 
-        LocalDate lenghtOfCycle = LocalDate.parse(periodStart);
-        LocalDate lenghtOfCycle2 = LocalDate.parse(periodEnd);
+         LocalDate start = LocalDate.parse(periodStart, DateTimeFormatter.ofPattern("dd/MM/yyyy")); 
+        LocalDate end = LocalDate.parse(periodEnd, DateTimeFormatter.ofPattern("dd/MM/yyyy")); 
+
 
         Period cyclePeriod = Period.between(start, end);
 
